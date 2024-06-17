@@ -2,6 +2,7 @@ package webCalendarSpring;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 
 @Entity
@@ -13,7 +14,7 @@ public class Event {
     @Column(name = "id")
     private Integer id;
 
-    @NotNull
+    @NotEmpty
     @Column(name = "event")
     private String event;
 
@@ -52,4 +53,6 @@ public class Event {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+
+
 }
